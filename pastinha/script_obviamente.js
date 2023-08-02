@@ -114,3 +114,94 @@ function Somar() {
     document.getElementById("Resposta").innerText = soma + 1
 
 }
+
+function Pares() {
+
+    let n1 = parseInt(document.getElementById("n1").value)
+    let n2 = parseInt(document.getElementById("n2").value)
+
+    if (n1 > n2) {
+
+        for (let cont = n2; cont <= n1; cont++) {
+            if (cont % 2 == 0) {
+
+                alert("Par")
+
+            }
+
+            else {
+
+
+                alert("Impar")
+
+
+            }
+
+
+            alert(cont)
+
+
+        }
+
+    }
+
+    else {
+
+        for (let cont = n1; cont <= n2; cont++) {
+
+            if (cont % 2 == 0) {
+
+                alert("Par")
+
+            }
+            else {
+
+                alert("Impar")
+
+            }
+
+            alert(cont)
+
+        }
+
+
+    }
+
+
+}
+
+function Primos() {
+
+    let n1 = parseInt(document.getElementById("n1").value)
+    let n2 = parseInt(document.getElementById("n2").value)
+
+    if (n1 > n2) {
+
+        for (let cont = n2; cont <= n1; cont++) {
+
+            if (cont % 2 == 0 || cont == 2) {
+
+                document.getElementById("Resposta").innerText = cont
+                console.log(cont)
+
+            }
+
+        }
+
+    }
+
+    else {
+
+        for (let cont = n1; cont <= n2; cont++) {
+
+            if (cont % 2 == 0 || cont == 2) {
+
+                document.getElementById("Resposta").innerText = cont
+
+            }
+
+        }
+
+    }
+
+}
