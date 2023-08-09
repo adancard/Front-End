@@ -205,3 +205,160 @@ function Primos() {
     }
 
 }
+
+function multiplica(a, b) {
+
+    return a * b;
+
+}
+
+function adicao(a, b) {
+
+    return a + b;
+
+}
+
+function subtracao(a, b) {
+
+    if (a > b) {
+
+        return (a - b)
+
+    } else {
+
+        return (b - a)
+
+    }
+
+}
+
+function divisao(a, b) {
+
+    if (a == 0 || b == 0) {
+
+        return document.getElementById("Resposta").innerText = "Divisão por zero"
+
+
+    }
+    else {
+
+        return (a / b)
+
+    }
+
+
+}
+
+function Operacoes() {
+
+    let opcao = parseInt(document.getElementById("opcao").value)
+    let n1 = parseInt(document.getElementById("n1").value)
+    let n2 = parseInt(document.getElementById("n2").value)
+    let Resultado;
+
+    parseInt(n1)
+    parseInt(n2)
+
+    switch (opcao) {
+
+        case 1:
+
+            Resultado = adicao(n1, n2)
+
+            document.getElementById("Resposta").innerText = "Resultado da soma: " + Resultado
+
+            break
+
+        case 2:
+
+            Resultado = subtracao(n1, n2)
+
+            document.getElementById("Resposta").innerText = "Resultado da subtração: " + Resultado
+
+            break
+
+        case 3:
+
+            Resultado = multiplica(n1, n2)
+
+            document.getElementById("Resposta").innerText = "Resultado da multiplicação: " + Resultado
+
+            break
+
+        case 4:
+
+            Resultado = divisao(n1, n2)
+
+            document.getElementById("Resposta").innerText = "Resultado da divisão: " + Resultado
+
+            break
+
+        default:
+
+            document.getElementById("Resposta").innerText = "Opção invalida"
+            break
+
+    }
+
+
+
+}
+
+
+function raiz(a) {
+
+    return Math.sqrt(a)
+
+}
+
+function exponencial(a) {
+
+    return Math.pow(a, a)
+
+}
+
+function Operacoes1() {
+
+    let n1 = parseInt(document.getElementById("n1").value)
+    let opcao = parseInt(document.getElementById("opcao").value)
+    let Resultado
+
+
+    switch (opcao) {
+
+        case 1:
+
+             Resultado = raiz(n1)
+
+            document.getElementById("Resposta").innerText = "A raiz é: " + Resultado
+            break
+
+        case 2:
+
+            Resultado = exponencial(n1)
+
+            document.getElementById("Resposta").innerText = "O exponencial é: " + Resultado
+            break
+
+
+    }
+
+
+}
+
+
+function reverseNum(n1){
+
+   var n1 = parseInt(prompt("Qual o numero?"))
+
+   var resultado = 0;
+   
+    while (n1 > 0) {
+        resultado = 10 * resultado + n1 % 10;
+        n1 = Math.floor(n1 / 10);
+    }
+
+    alert("O resultado da inversão é: "+resultado)
+  
+}
+
