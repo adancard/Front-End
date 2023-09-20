@@ -34,7 +34,7 @@ export default class Cliente {
 
     toString() {
 
-        `O seu Nome é ${this.getNomeCompleto.primeio}, Nasci em ${this.#dataCliente}`
+        `O seu Nome é ${this.getNomeCompleto}, Nasci em ${this.#dataCliente}`
 
     }
 
