@@ -52,10 +52,7 @@ export default class Produto {
 
     toString() {
 
-        `Nome do produto: ${this.#nome} 
-        Preco: ${this.#preco}
-        Data Fabricação: ${this.#dataFabricacao}
-        Data de Validade: ${this.#dataValidade}`
+       return `Nome do produto: ${this.#nome}\n Preco: ${this.#preco}\n Data Fabricação: ${this.#dataFabricacao}\n Data de Validade: ${this.#dataValidade}`
 
     }
 

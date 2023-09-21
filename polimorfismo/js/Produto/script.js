@@ -1,30 +1,45 @@
 import Produto from "./Produto.js";
+import Produtos from "./Produtos.js";
 
+let produtos = new Produtos();
 
-document.getElementById("enviar").addEventListener("click", function produto() {
+document.getElementById("enviar").addEventListener("click", function adicionarProduto() {
 
-    let produto = new Produto();
     let nome = document.getElementById("nome").value;
     let preco = document.getElementById("preco").value;
-    let dataFabricacao = new Date(document.getElementById("dataFabricacao").value);
-    let dataValidade = new Date(document.getElementById("dataValidade").value);
-    let data = new Date();
+    let dataFabricacao = new Date(document.getElementById("dataFabricacao").value).toLocaleDateString('en-GB');
+    let dataValidade = new Date(document.getElementById("dataValidade").value).toLocaleDateString('en-GB');
 
-    produto.setPreco = preco;
-    produto.setNome = nome;
+    if (nome === '' || preco === '') {
 
-    console.log(nome);
-    console.log(produto.getNome)
+        alert("Insira algo para ser adicionado");
 
-    if(dataValidade < data){
 
-        document.getElementById("saida").innerText = `Nome do produto: ${nome}, Preco: ${produto.getPreco}, Data Fabricação: ${dataFabricacao}, Data de Validade: ${dataValidade}, Produto Vencido`
+    } else {
 
-    }else{
 
-        document.getElementById("saida").innerText = `Nome do produto: ${nome}, Preco: ${produto.getPreco}, Data Fabricação: ${dataFabricacao},Data de Validade: ${dataValidade}, Dentro da Validade`
+        let produto = new Produto(nome, preco, dataFabricacao, dataValidade);
+
+        produtos.adicionarProduto(produto);
+
+        let lista = document.getElementById("listaProduto");
+        while (lista.firstChild) {
+            lista.removeChild(lista.firstChild)
+        }
+
 
     }
 
+})
+
+
+document.getElementById("listar").addEventListener("click", function listarProdutos() {
+
+    produtos.listarProdutos()
+
+    document.getElementById("saida").value = ""
 
 })
+
+
+

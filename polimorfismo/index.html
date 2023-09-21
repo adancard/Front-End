@@ -6,28 +6,34 @@
     <title> </title>
     <script type="module" src="js/Produto/script.js"></script>
 </head>
+
+<style>
+
+    body{
+
+        background-color: grey;
+
+    }
+
+
+
+</style>
+
 <body>
 
+    <h2>Lista de Produtos</h2>
 
     <input type="text" name="nome" id="nome" placeholder="Insira do Produto">
-    <br>
-    <br>
     <input type="text" name="preco" id="preco" placeholder="Insira o preco">
-    <br>
-    <br>
     <label>Data de Fabricação</label>
-    <br>
-    <input type="date" name="dataFabricacao" id="dataFabricacao" placeholder="Insira Data de Fabricação">
-    <br>
-    <br>    
+    <input type="date" name="dataFabricacao" id="dataFabricacao" placeholder="Insira Data de Fabricação">  
     <label>Data de Validade</label>
-    <br>
     <input type="date" name="dataValidade" id="dataValidade" placeholder="Insira Data de Data de Validade">
-    <br>
-    <br>
     <button type="submit" id="enviar" name="enviar">Enviar</button>
+    <button type="submit" id="listar" name="listar">listar</button>
 
     <p id="saida"></p>
+    <ul id="listaProduto"></ul>
     
 </body>
 </html>
