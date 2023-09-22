@@ -22,41 +22,23 @@ export default class Produtos {
 
     }
 
+
+
     listarProdutos() {
 
-        let listarProdutos = document.getElementById("listaProduto");
-        let dataHoje = new Date().toLocaleDateString('en-GB');
+        let listarProdutos = document.getElementById("listaProduto");
 
         for (let i = 0; i < this.#listaProdutos.length; i++) {
 
             let produto = this.#listaProdutos[i]
             let itemProduto = document.createElement("li")
 
-            if (document.getElementById("dataValidade").value  < dataHoje) {
-
-                let produtoTexto = document.createTextNode(`${produto.toString()}, Produto na Validade`)
+            let produtoTexto = document.createTextNode(`${produto.toString()})
 
                 itemProduto.appendChild(produtoTexto);
 
                 listarProdutos.appendChild(itemProduto)
 
-
-            } 
-            if (document.getElementById("dataValidade").value  > dataHoje) {
-
-
-                let produtoTexto = document.createTextNode(`${produto.toString()} Produto Vencido`)
-
-                itemProduto.appendChild(produtoTexto);
-
-                listarProdutos.appendChild(itemProduto)
-
-
-            }
-
-
-
-        }
 
 
 
