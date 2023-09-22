@@ -6,13 +6,13 @@ export default class Produto {
     #dataValidade
     #vencimento
 
-    constructor(nome, preco, dataFabricacao, dataValidade,vencimento) {
+    constructor(nome, preco, dataFabricacao, dataValidade, vencimento) {
 
         this.#nome = nome;
         this.#preco = preco;
         this.#dataFabricacao = dataFabricacao;
         this.#dataValidade = dataValidade;
-        thia.#vencimento = vencimento;
+        this.#vencimento = vencimento;
 
     }
 
@@ -50,24 +50,24 @@ export default class Produto {
 
     get getDataValidade() { return this.#dataValidade }
 
-  
-    set setVencimento(vencimento){
 
-     this.#vencimento=vencimento
+    set setVencimento(vencimento) {
 
-   }
+        this.#vencimento = vencimento
 
-  get getVencimento(){
+    }
 
-  return this.#vencimento
+    get getVencimento() {
 
- }
+        return this.#vencimento
+
+    }
 
 
 
     toString() {
 
-       return `Nome do produto: ${this.#nome} Preco: ${this.#preco} Data Fabricação: ${this.#dataFabricacao} Data de Validade: ${this.#dataValidade} ${this.#vencimento}`
+        return `Nome do produto: ${this.#nome} Preco: ${this.#preco} Data Fabricação: ${this.#dataFabricacao} Data de Validade: ${this.#dataValidade} ${this.#vencimento}`
 
     }
 

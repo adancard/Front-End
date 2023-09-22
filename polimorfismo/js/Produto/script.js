@@ -9,7 +9,6 @@ document.getElementById("enviar").addEventListener("click", function adicionarPr
     let preco = document.getElementById("preco").value;
     let dataFabricacao = new Date(document.getElementById("dataFabricacao").value).toLocaleDateString('en-GB');
     let dataValidade = new Date(document.getElementById("dataValidade").value).toLocaleDateString('en-GB');
- let dataHoje = new Date().toLocaleDateString('en-GB');
 
     if (nome === '' || preco === '') {
 
@@ -18,12 +17,7 @@ document.getElementById("enviar").addEventListener("click", function adicionarPr
 
     } else {
 
-
-       if(dataValidade > dataHoje){
-      
-       let naoVencido = "Dentro da Data de Validade"
-
-          let produto = new Produto(nome, preco, dataFabricacao, dataValidade,naoVencido);
+        let produto = new Produto(nome, preco, dataFabricacao, dataValidade, produtos.Vencimento());
 
         produtos.adicionarProduto(produto);
 
@@ -31,36 +25,13 @@ document.getElementById("enviar").addEventListener("click", function adicionarPr
         while (lista.firstChild) {
             lista.removeChild(lista.firstChild)
 
-        }eles{
-
-          let vencido = "Fora da Data de Validade"  
-
-            let produto = new Produto(nome, preco, dataFabricacao, dataValidade,vencido);
-
-        produtos.adicionarProduto(produto);
-
-        let lista = document.getElementById("listaProduto");
-        while (lista.firstChild) {
-            lista.removeChild(lista.firstChild)
         }
-
-
-
-
-
-}
-
-
-
-       }
-
-
-  
 
 
     }
 
-})
+}
+)
 
 
 document.getElementById("listar").addEventListener("click", function listarProdutos() {

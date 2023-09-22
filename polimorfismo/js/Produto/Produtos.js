@@ -26,26 +26,47 @@ export default class Produtos {
 
     listarProdutos() {
 
-        let listarProdutos = document.getElementById("listaProduto");
+        let listarProdutos = document.getElementById("listaProduto");
+
 
         for (let i = 0; i < this.#listaProdutos.length; i++) {
 
             let produto = this.#listaProdutos[i]
             let itemProduto = document.createElement("li")
 
-            let produtoTexto = document.createTextNode(`${produto.toString()})
+            let produtoTexto = document.createTextNode(`${produto.toString()}`)
 
-                itemProduto.appendChild(produtoTexto);
+            itemProduto.appendChild(produtoTexto)
 
-                listarProdutos.appendChild(itemProduto)
+            listarProdutos.appendChild(itemProduto)
+
+        }
+    }
+
+    Vencimento() {
+
+        let dataHoje = new Date().toLocaleDateString('en-GB');
+        let dataValidade = new Date(document.getElementById("dataValidade").value).toLocaleDateString('en-GB');
+
+        if (dataValidade >= dataHoje) {
+
+            let naoVencido = "Dentro da Data de Validade"
+
+            return naoVencido;
+
+
+        }
+        else {
+
+            let vencido = "Fora da Data de Validade"
+
+            return vencido
+
+        }
 
 
 
 
     }
-
-
-
-
 
 }
