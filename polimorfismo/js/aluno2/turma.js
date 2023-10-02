@@ -36,8 +36,6 @@ export default class Turma{
             alunos.splice(i,1)
         }
         
-
-
     }
 
     listarAlunos(){
@@ -47,14 +45,14 @@ export default class Turma{
       
         for (let i = 0; i < this.#alunos.length; i++) {
 
-            let produto = this.#alunos[i]
-            let itemProduto = document.createElement("li")
+            let aluno = this.#alunos[i]
+            let itemAluno = document.createElement("li")
 
-            let produtoTexto = document.createTextNode(`${aluno.toString()}`)
+            let alunoTexto = document.createTextNode(`${aluno.toString()}`)
 
-            itemProduto.appendChild(produtoTexto)
+            itemProduto.appendChild(alunoTexto)
 
-            listaDeAlunos.appendChild(itemProduto)
+            listaDeAlunos.appendChild(itemAluno)
 
         }
 

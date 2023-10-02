@@ -70,4 +70,35 @@ function listarAlunos(){
 
     }
 
+    turma.listarAlunos()
+
+    let caixaDeSelecaoEntradas = listaAlunos.querySelectorAll("input[type='checkbox']")
+    for(let i = 0; i < caixaDeSelecaoEntradas.length; i++){
+
+        let entrada = caixaDeSelecaoEntradas[i]
+        validarEventoCliqueEmCaixaDeSelecao(entrada)
+
+    }
+
+    atualizarestadoRemovedorItens()
+
+}
+
+function removerItens(){
+
+    let listaAluno = document.getElementById("listaAluno")
+    let caixaDeSelecaoEntradas = listaAluno.querySelectorAll("input[type='checkbox']:checked")
+
+    let indicesSelecionados = [];
+
+    for(let i = 0;i<caixaDeSelecaoEntradas.length; i++){
+
+        indicesSelecionados.push(entrada.value)
+
+    }
+
+    turma.removerAluno(indicesSelecionados)
+
+    listarAlunos()
+
 }
