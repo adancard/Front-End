@@ -11,7 +11,7 @@ document.getElementById("enviar").addEventListener("click", function calcular() 
     cliente.setNomeCompleto = nome
     cliente.setDataCliente = data
 
-    let result = hoje.getFullYear() - data.getFullYear() - 1
+    let result = hoje.getFullYear() - data.getFullYear() - 1 * - 1
 
     document.getElementById("saida").innerText = `Seu Primeiro nome é ${cliente.getNomeCompleto}, Voce tem ${result} anos`
 

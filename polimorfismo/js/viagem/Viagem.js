@@ -8,8 +8,8 @@ export default class Viagem{
     constructor(destino,dataPartida,dataRetorno,orcamento){
 
         this.#destino=destino;
-        this.#dataPartida = dataPartida;
-        this.#dataRetorno = dataRetorno;
+        this.#dataPartida = new Date(dataPartida);
+        this.#dataRetorno = new Date(dataRetorno);
         this.#orcamento=orcamento;
 
     }
@@ -51,11 +51,11 @@ export default class Viagem{
 
     get getOrcamento(){return this.#orcamento}
 
-
     calcularDuracao(){
 
-    
-
+        const diaMilissegundos = 1000 * 60 * 60 * 24;
+        const tempoMilissegundos = this.#dataRetorno - this.#dataPartida;
+        return Math.ceil(tempoMilissegundos / diaMilissegundos) * -1;
 
     }
 
@@ -82,7 +82,7 @@ export default class Viagem{
 
     exibirDetalhesViagem(){
 
-        return `Destino : ${this.#destino}\n
+        return `Destino : ${this.#destino}
         Data de Partida: ${this.#dataPartida}
         Data de Retorno ${this.#dataRetorno}
         Duração da Viagem: ${this.calcularDuracao()}

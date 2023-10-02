@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> </title>
-    <script type="module" src="js/viagem/viagem2.js"></script>
+    <script type="module" src="js/Funcionarios/principal.js"></script>
 </head>
 
 <style>
@@ -35,7 +35,7 @@
 
 
     
-    <input type="text" name="destino" id="destino" placeholder="Insira o Destino">
+    <!-- <input type="text" name="destino" id="destino" placeholder="Insira o Destino">
     <label>Data de Partida</label>
     <input type="date" name="dataPartida" id="dataPartida">
     <label>Data de Retorno</label>
@@ -43,7 +43,33 @@
     <input type="number" name="orcamento" id="orcamento" placeholder="Insira o Orçamento">
     <button type="submit" id="enviar" name="enviar">Enviar</button>
 
-    <p id="saida"></p>
+    <p id="saida"></p> -->
+
+
+    <h1>Detalhes do Funcionário</h1>
+
+    <form id="formulario">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required><br>
+  
+      <label for="dataContratacao">Data de Contratação:</label>
+      <input type="date" id="dataContratacao" required><br>
+  
+      <label for="dataDemissao">Data de Demissão:</label>
+      <input type="date" id="dataDemissao"><br>
+  
+      <label for="horasExtras">Horas Extras:</label>
+      <input type="number" id="horasExtras" required><br>
+  
+      <label for="salario">Salário:</label>
+      <input type="number" id="salario" required><br>
+  
+      <button type="submit">Calcular Detalhes</button>
+    </form>
+  
+    <div id="resultado">
+      <!-- Aqui serão exibidos os detalhes do funcionário -->
+    </div>
 
 
 </body>
