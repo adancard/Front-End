@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="_js/Principal.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid p-3 bg-danger text-white text-center">
+        <h1>Aplicação do Professor</h1>
+        <p>O braço forte do professor!!!</p>
+    </div>
+
+    <div class="container mt-4 ">
+        <img src="https://desenvolveitapevi.files.wordpress.com/2016/02/logo-senai1.png" alt="senai-logo" class="img-fluid">
+        <div class="row">
+            <div class="col border border-3 p-2  border-danger rounded mr-3" >
+            
+
+                <div class="form-floating ">
+                    <label for="nome">Nome do Aluno:</label>
+                    <input type="text" id="nome" class="form-control" placeholder="nome" style="width: 300px;">
+                </div>
+
+                <br>
+                <div class="form-floating">
+                    <label for="cpf">CPF do aluno:</label>
+                    <input type="number" id="cpf" class="form-control" placeholder="CPF" style="width: 300px">
+                </div>
+
+                <br>
+                <div>
+                    <label for="matricula">Numero de Matricula:</label>
+                    <input type="text" id="matricula" class="form-control" placeholder="Matricula">
+                </div>
+
+                <br>
+                <div>
+                    <label for="numeroAluno">Numero do Aluno</label>
+                    <input type="number" id="numeroAluno" class="form-control" placeholder="Numero do Aluno">
+                </div>
+
+                <br>
+                <div>
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" class="form-control" placeholder="Data">
+                </div>
+
+                <br>
+                <div><button type="button" class="btn btn-outline-danger btn-block">Confirmar Dados</button></div>
+
+
+            </div>
+            <div class="col border border-3 p-2  border-danger rounded mr-3">
+                <p class="text-center"> Informações Aluno</p>
+                <p id="infoAluno"></p>
+               
+            </div>
+            <div class="col border border-3 p-2  border-danger rounded mr-3">
+                <p>Provas </p>
+                <p>Validações</p>
+
+            </div>
+        </div>
+        <div class="col-">
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
