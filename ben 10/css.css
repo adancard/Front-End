@@ -1,0 +1,90 @@
+*{
+
+padding: 0px;
+margin: 0px;
+
+}
+
+body{
+
+    height: 603px;
+
+}
+
+
+header{
+
+    background-color: #2a2626;
+    float: left;
+    height: 100%;
+    width: 15%;
+    color: snow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+a{
+
+    padding: 10px;
+    text-decoration: none;
+    color: snow;
+
+}
+
+
+
+.dropdown{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: inline-block; 
+    padding: 10px;
+
+}
+
+
+
+.estiloBtnDropdown{
+
+    color: snow;
+    background-color: #2a2626;
+    width: 100%;
+    border: none;
+
+}
+
+/* .conteudoDropdown {
+    display: none;
+    background-color: #2a2626; 
+    overflow: auto; 
+    z-index: 1; 
+} */
+
+/* Define estilos para links dentro do dropdown */
+.conteudoDropdown a {
+    color: snow; /* Cor do texto dos links */
+    padding: 12px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove a decoração de link (sublinhado) */
+    display: block; /* Define como bloco para ocupar a largura total */
+}
+
+.conteudoDropdown {
+    display: none; /* Inicialmente, oculta o conteúdo do dropdown */
+    position: absolute; /* Define a posição absoluta para posicionar com base no elemento pai */
+    background-color: #2a2626; 
+    min-width: 160px; /* Largura mínima do dropdown */
+    overflow: auto; /* Adiciona uma barra de rolagem quando o conteúdo é maior que o contêiner */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra para o dropdown */
+    z-index: 1; /* Define a ordem z para controlar a sobreposição */
+}
+
+/* Define uma classe para exibir o conteúdo do dropdown */
+.exibir {
+    display: initial; /* Torna o conteúdo do dropdown visível (display: block) */
+}
